@@ -1,0 +1,1 @@
+$(".filter-btn").click(function(i){var s=$(this).next();s.is(":hidden")?(s.slideDown(250),$(this).addClass("active")):(s.slideUp(250),$(this).removeClass("active"))});
