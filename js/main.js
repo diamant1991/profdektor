@@ -1,1 +1,29 @@
-$(".filter-btn").click(function(i){var s=$(this).next();s.is(":hidden")?(s.slideDown(250),$(this).addClass("active")):(s.slideUp(250),$(this).removeClass("active"))});
+$('.filter-btn').click(function(event) {
+	var drop = $(this).next();
+	if(drop.is(':hidden')){
+		drop.slideDown(250)
+		$(this).addClass('active')
+	}
+	else{
+		drop.slideUp(250)
+		$(this).removeClass('active')
+	}
+});
+
+$('#card-slider').bxSlider({
+  pagerCustom: '#thumb',
+  mode: 'fade'
+});
+$(document).ready(function() {
+  $(".fancybox").fancybox({
+    padding : 0,
+    openEffect	: 'elastic',
+		closeEffect	: 'elastic',
+		helpers: {
+			overlay: {
+				locked: false
+			}
+		}
+	});
+
+});
